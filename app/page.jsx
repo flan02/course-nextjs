@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+
 //import styles from "./page.module.css";
 
 //! App ignora cualquier archivos que no se llame page o layout
