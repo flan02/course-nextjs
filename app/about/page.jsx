@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "About | HomePage",
+  description: "Generated with nextjs",
+};
+
 const About = () => {
   return (
     <>
