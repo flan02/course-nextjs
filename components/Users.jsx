@@ -1,4 +1,4 @@
-// * 'use client'
+"use client";
 import { useEffect } from "react";
 
 //? Los metadatos se ejecutan solo en el servidor aqui no funcionaran
@@ -7,7 +7,16 @@ import { useEffect } from "react";
 const Users = () => {
   useEffect(() => {}, []);
 
-  return <div>Users</div>;
+  return (
+    <>
+      <section>
+        <p>Users</p>
+        <button onClick={() => console.log("click from clientside")}>
+          Click
+        </button>
+      </section>
+    </>
+  );
 };
 
 export default Users;
