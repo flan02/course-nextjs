@@ -1,9 +1,6 @@
 //"use client"; //! Por defecto nextjs ejecuta el codigo del lado del servidor, esto es para ejecutarlo del lado cliente
 //TODO todos los hijos de este componente se ejecutaran del lado cliente
-
-/* 
-! Importante podemos dejar el componente padre en el servidor y los hijos que necesitemos en el frontend le agregamos el 'use client' en su archivo
-*/
+//! Importante podemos dejar el componente padre en el servidor y los hijos que necesitemos en el frontend le agregamos el 'use client' en su archivo
 
 import Navbar from "@/components/Navbar";
 import Users from "@/components/Users";
@@ -54,7 +51,7 @@ export default function Home() {
         <button onClick={() => {}}>Click</button>
       </section>
       */}
-      <Posts />
+      {/* <Posts /> */}
     </>
   );
 }

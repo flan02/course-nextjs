@@ -10,3 +10,6 @@
 
 ### LAYOUT
 *Con nextjs podemos crear varios layouts para componente que nosotros queramos englobar. Muy util en una aplicacion grande.*
+
+### Componentes
+*Los componentes tipicos de React se escribe el archivo con UpperCase, los componentes renderizados desde el servidor por nextjs (page,layout,loading) se escriben en minuscula.*

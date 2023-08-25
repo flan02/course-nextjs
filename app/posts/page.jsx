@@ -9,6 +9,7 @@ async function loadPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await res.json();
   //console.log(posts); //* lo veremos en la consola de nextjs!
+  await new Promise((resolve) => setTimeout(resolve, 4000)); //* Simulamos una peticion lenta
   return posts; //* Retornamos los posts
 }
 
