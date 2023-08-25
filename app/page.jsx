@@ -1,18 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
-import Navbar from "../components/Navbar";
+"use client"; //! Por defecto nextjs ejecuta el codigo del lado del servidor, esto es para ejecutarlo del lado cliente
+//TODO todos los hijos de este componente se ejecutaran del lado cliente
+import { useState } from "react"; //! debemos usar 'use client' p/q funcione el hook de react
+/* 
+! Importante podemos dejar el componente padre en el servidor y los hijos que necesitemos en el frontend le agregamos el 'use client' en su archivo
+*/
 
+import Navbar from "@/components/Navbar";
+import Users from "@/components/Users";
 //import styles from "./page.module.css";
 
-//! App ignora cualquier archivos que no se llame page o layout
-// ? Link reemplaza la etiqueta <a> y evita que se recargue la página
-
-//TODO leer nextjs metadata para conocer todas las etiquetas que son admitidas.
-
-//* El metadata de openGraph es leido por apps como facebook, twitter, whatsapp, etc.
-//? Era las etiquetas antiguas metadata OG
-
-//* Esto se ve desde la pestaña de network en el navegador y el description se ve en la pestaña de search
+//? Los metadatos se ejecutan solo en el servidor
 export const metadata = {
   title: "Course NextJS HomePage",
   description: "Generated with nextjs",
@@ -35,11 +32,31 @@ export const metadata = {
   },
 };
 
+/* 
+ * Requiere del 'use client' para funcionar
+ ! window.locaStorage.getItem("anything") -> Tampoco tenemos definido el objeto window en el servidor, por lo tanto no funcionara
+*/
+
+//? La el componente padre se ejecuta en el backend
 export default function Home() {
   return (
     <>
       <h1>NEXTJS COURSE</h1>
       <Navbar />
+      <section>
+        <button onClick={() => console.log("click from clientside")}>
+          Click
+        </button>
+      </section>
+      {/* Users es un componente Client */}
+      <Users />
+      {/*
+      //? No funcionara el componente porq viene del servidor y la funcion se ejecuta del lado cliente
+      //! Soluciones el onclick deberia ser backend, si es frontend usar 'use client'
+      <section>
+        <button onClick={() => {}}>Click</button>
+      </section>
+      */}
     </>
   );
 }
