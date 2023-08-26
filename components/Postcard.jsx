@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 //TODO Es un RCC
 
@@ -6,7 +7,9 @@
 const Postcard = ({ post, key }) => {
   return (
     <>
-      <h3>{post.title}</h3>
+      <Link href={`/posts/${post.id}`}>
+        <h3>{post.title}</h3>
+      </Link>
       <p>{post.body}</p>
       <span>{`id del post: ${post.id} `}</span>
       <button
