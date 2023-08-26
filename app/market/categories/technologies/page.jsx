@@ -1,3 +1,5 @@
+//import Postcard from "@/components/Postcard"; (ALIAS @)
+
 const Technologies = () => {
   return (
     <div>

@@ -1,9 +1,12 @@
 import Link from "next/link";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav>
-      <h1>Navbar component</h1>
+    <nav className="navbar p-20 bg-black text-yellow-100">
+      <Link href="/">
+        <h1 className="text-3xl font-bold">Navbar stylized by us</h1>
+      </Link>
       <ul>
         <li>
           <Link href="/about">About</Link>

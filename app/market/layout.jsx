@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 //? El nav sera visible en todos los archivos que esten dentro de la carpeta market
@@ -6,6 +7,7 @@ import Link from "next/link";
 const MarketRoot = ({ children }) => {
   return (
     <>
+      <Navbar />
       <nav>
         <h3>Section Market</h3>
         <ul>

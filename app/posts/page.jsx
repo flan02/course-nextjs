@@ -2,9 +2,9 @@
 //* useState -> para guardar datos
 //* useEffect -> para cargar datos
 
+import Navbar from "@/components/Navbar";
 import Postcard from "@/components/Postcard";
-
-
+import "./Post.css";
 
 //TODO recordar que nextjs se ejecuta por defecto desde el servidor
 async function loadPosts() {
@@ -26,10 +26,13 @@ async function Posts() {
   //console.log(posts);
   return (
     <>
+      <Navbar />
       <h1>Posts page</h1>
-      {vault.map((post) => (
-        <Postcard post={post} key={post.id} />
-      ))}
+      <div className="grid">
+        {vault.map((post) => (
+          <Postcard post={post} key={post.id} />
+        ))}
+      </div>
     </>
   );
 }

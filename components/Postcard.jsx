@@ -6,12 +6,13 @@ import Link from "next/link";
 //! No es necesario importar el key
 const Postcard = ({ post, key }) => {
   return (
-    <>
-      <Link href={`/posts/${post.id}`}>
-        <h3>{post.title}</h3>
+    <div className="bg-gray-950 p-10 text-fuchsia-300">
+      <Link href={`/posts/${post.id}`} className="text-fuchsia-400">
+        <h3 className="text-xl font-bold mb-4">{post.title}</h3>
       </Link>
-      <p>{post.body}</p>
+      <p className="text-slate-300">{post.body}</p>
       <span>{`id del post: ${post.id} `}</span>
+      <br />
       <button
         onClick={() => {
           console.log(`redirect to the post: ${post.id}`);
@@ -19,7 +20,7 @@ const Postcard = ({ post, key }) => {
       >
         click post
       </button>
-    </>
+    </div>
   );
 };
 
