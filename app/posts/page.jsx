@@ -4,6 +4,8 @@
 
 import Postcard from "@/components/Postcard";
 
+
+
 //TODO recordar que nextjs se ejecuta por defecto desde el servidor
 async function loadPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -18,8 +20,9 @@ async function loadPosts() {
 //! React Server Components procesa codigo asincrono caracteristica del servidor
 async function Posts() {
   const posts = await loadPosts(); //* Aqui los recibimos a los posts debe ser async
-  let vault = [];
-  for (let i = 0; i < 10; i++) vault[i] = posts[i]; //* Guardamos los 10 primeros posts
+  const vault = posts;
+  // let vault = [];
+  // for (let i = 0; i < 10; i++) vault[i] = posts[i]; //* Guardamos los 10 primeros posts
   //console.log(posts);
   return (
     <>
