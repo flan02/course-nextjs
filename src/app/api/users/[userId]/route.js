@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 //TODO Similar al front end: con params puedo extraer los parametros de la url dinamicamente
 //TODO query en url: ?name=juan&age=20
 
+//TODO crear datos, los enviamos desde el cliente al servidor. [Request body]
+
 export async function GET(req, { params }, res) {
   //console.log(req); //* req: nos da informacion de la peticion
 

@@ -26,7 +26,16 @@ export async function GET() {
 
 //! Navegador no me deja probar estas peticiones. Solo GET
 //! En su lugar user POSTMAN
-export function POST() {
+
+//TODO crear datos, enviamos desde el cliente al servidor. [Request body]
+//* accedemos a ellos a traves del request
+
+export async function POST(req) {
+  //? es async porque estamos haciendo una peticion a un servidor externo (nuestro cliente)
+  //lo probamos con postman enviando un json { "nombre": "juan" }
+  //const data = await req.json(); //* accedemos asi en nextjs a los datos del body en [Express: req.body]
+  const { nombre, apellido, apodo } = await req.json();
+  console.log(nombre, apellido, apodo);
   return nextResponse.json({ message: "creating data" });
 }
 
