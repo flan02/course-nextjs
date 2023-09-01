@@ -1,6 +1,8 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+//TODO https://www.prisma.io/docs/getting-started/quickstart
+//* VScode extension SQlite viewer
 //* npx prisma studio offers a localhost:5555 GUI for your database
 
 generator client {
