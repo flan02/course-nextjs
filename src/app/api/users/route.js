@@ -1,7 +1,8 @@
 //* response from backend only data
-
 import { NextResponse, nextResponse } from "next/server";
 //TODO nextResponse me permite retornar varios tipos de datos
+
+console.log(process.env.TOKEN); // process objeto global de nodejs
 
 export async function GET() {
   //const res = new Response("Response from backend");
