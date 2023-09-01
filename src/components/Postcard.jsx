@@ -1,10 +1,13 @@
 "use client";
 import Link from "next/link";
 
-//TODO Es un RCC
+//? Nos permite acceder a lo que este en la URL desde el clientside
+import { useParams } from "next/navigation";
 
 //! No es necesario importar el key
-const Postcard = ({ post, key }) => {
+const Postcard = ({ post }) => {
+  const params = useParams();
+  console.log(params);
   return (
     <div className="bg-gray-950 p-10 text-fuchsia-300">
       <Link href={`/posts/${post.id}`} className="text-fuchsia-400">

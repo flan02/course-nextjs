@@ -39,8 +39,8 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <h1>NEXTJS COURSE</h1>
       <Navbar />
+      <h1>NEXTJS COURSE</h1>
 
       {/* Users es un componente Client */}
       <Users />
