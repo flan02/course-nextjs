@@ -13,3 +13,12 @@
 
 ### Componentes
 *Los componentes tipicos de React se escribe el archivo con UpperCase, los componentes renderizados desde el servidor por nextjs (page,layout,loading) se escriben en minuscula.*
+
+## www.reqres.in
+*Es como json placeholder nos da otros datos*
+
+# Cuando usar 'use client'
+**manejador de eventos**
+**api de navegador**
+**estados**
+**hooks**

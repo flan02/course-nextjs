@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 //import { Inter } from "next/font/google";
 import { Roboto } from "next/font/google"; //* {} + CTRL + SPACE
@@ -17,7 +18,16 @@ const roboto = Roboto({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body>
+        <header>
+          <Navbar />
+        </header>
+        <main
+          className={`${roboto.className} container mx-auto h-screen flex justify-center items-center`}
+        >
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
