@@ -1,8 +1,0 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-content: center;
-    grid-gap: 1rem;
-    padding: 0 20px;
-    border: thin solid wheat;
-}
