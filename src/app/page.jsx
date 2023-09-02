@@ -1,3 +1,4 @@
+import TaskCard from "@/components/TaskCard";
 import { prisma } from "@/libs/prisma";
 
 /*
@@ -25,19 +26,7 @@ export default async function HomePage() {
       <h1 className="w-max mx-auto text-8xl text-blue-400 mb-4">Tasks list</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {tasks.map((task) => (
-          <div
-            key={task.id}
-            className="bg-slate-900 flex flex-col p-3 mt-4 mx-2 border border-orange-200 hover:bg-slate-800 hover:cursor-pointer"
-          >
-            <h6 className="text-white text-xs">task: {task.id}</h6>
-            <h2 className="font-bold text-2xl my-2 w-max mx-auto">
-              {task.title.charAt(0).toUpperCase() + task.title.slice(1)}
-            </h2>
-            <p className="text-white text-lg">{task.description}</p>
-            <h6 className="mt-2 text-xs">
-              {new Date(task.createdAt).toLocaleDateString()}
-            </h6>
-          </div>
+          <TaskCard task={task} key={task.id} />
         ))}
       </div>
     </section>
