@@ -20,7 +20,7 @@ async function loadTasks() {
 
 export default async function HomePage() {
   const tasks = await loadTasks();
-  console.log(tasks);
+  //console.log(tasks);
   return (
     <section className="container mx-auto mt-8">
       <h1 className="w-max mx-auto text-8xl text-blue-400 mb-4">Tasks list</h1>

@@ -18,7 +18,7 @@ function TaskCard({ task }) {
       </h2>
       <p className="text-white text-lg">{task.description}</p>
       <h6 className="mt-2 text-xs">
-        {new Date(task.createdAt).toLocaleDateString()}
+        {/* new Date(task.createdAt).toLocaleDateString() */}
       </h6>
     </div>
   );

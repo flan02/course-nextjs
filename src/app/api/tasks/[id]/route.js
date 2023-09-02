@@ -30,7 +30,7 @@ export async function DELETE(req, { params }) {
         id: Number(params.id),
       },
     });
-    console.log(taskRemoved); //* visualizo la tarea que se elimino
+    //console.log(taskRemoved); //* visualizo la tarea que se elimino
     if (taskRemoved === null) taskRemoved = "The task doesn't exist";
     return NextResponse.json(taskRemoved);
   } catch (error) {
