@@ -1,3 +1,4 @@
+import NavbarTask from "@/components/NavbarTask";
 import "../../globals.css";
 import { roboto } from "@/app/styles/font.js";
 
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable}`}>
-      <body>{children}</body>
+      <body>
+        <NavbarTask />
+        {children}
+      </body>
     </html>
   );
 }

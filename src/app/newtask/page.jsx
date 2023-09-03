@@ -43,10 +43,11 @@ function NewTask({ params }) {
       });
       const data = await res.json();
     }
-    router.prefetch(false); //TODO para que no se quede en la pagina de edicion
+    //router.prefetch(false);
     router.refresh(); //TODO para que se refresque la pagina y actualice el estado
     router.push("/");
   };
+
   return (
     <>
       <div className="h-screen flex flex-col justify-center items-center">
@@ -82,12 +83,36 @@ function NewTask({ params }) {
             placeholder="Describe your task"
             className="border border-gray-400 p-2 mb-4 w-full text-blue-700"
           ></textarea>
-          <div className="w-full">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <div className="w-full flex justify-between">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
               {params.id ? "Edit" : "New"}
             </button>
+            {params.id && (
+              <button
+                onClick={async () => {
+                  await fetch(`/api/tasks/${params.id}`, {
+                    method: "DELETE",
+                  });
+                  router.refresh(); //TODO para que se refresque la pagina y actualice el estado
+                  router.push("/");
+                }}
+                type="button"
+                className="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Delete
+              </button>
+            )}
           </div>
         </form>
+        <button
+          onClick={() => router.back()}
+          className="my-4 bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        >
+          back
+        </button>
       </div>
     </>
   );

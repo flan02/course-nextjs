@@ -1,3 +1,4 @@
+import ButtonTask from "@/components/ButtonTask";
 import TaskCard from "@/components/TaskCard";
 import { prisma } from "@/libs/prisma";
 
@@ -29,6 +30,7 @@ export default async function HomePage() {
           <TaskCard task={task} key={task.id} />
         ))}
       </div>
+      <ButtonTask />
     </section>
   );
 }
