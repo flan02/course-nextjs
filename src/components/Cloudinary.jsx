@@ -16,22 +16,21 @@ function Cloudinary() {
           const res = await fetch("api/cloudinary", {
             method: "POST",
             body: formData,
-            headers: {
-              //*IMPORTANTE: NO ES NECESARIO ESTABLECER EL CONTENT-TYPE SUBIENDO ARCHIVOS
-              //"Content-Type": "multipart/form-data",
-              //"Content-Type": "application/json",
-            },
           });
           const data = await res.json();
-          console.log(data);
+          console.log("Image data", data);
           setImageUrl(data.url);
         }}
       >
         <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         <button type="submit">Send</button>
       </form>
+      <br />
       {imageUrl && (
-        <img src={imageUrl} alt="uploaded image" width={300} height={300} />
+        <>
+          <img src={imageUrl} alt="uploaded image" width={300} height={300} />
+          <p>{imageUrl}</p>
+        </>
       )}
     </div>
   );

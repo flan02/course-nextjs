@@ -1,3 +1,4 @@
+process.noDeprecation = true;
 import { NextResponse } from "next/server";
 import { writeFile } from "fs/promises";
 import path from "path";
@@ -19,9 +20,11 @@ export async function POST(req) {
   const buffer = Buffer.from(bytes);
 
   const res = await new Promise((resolve, reject) => {
-    cloudinary.uploader
+    cloudinary.v2.uploader
       .upload_stream({}, (err, result) => {
-        if (err) reject(err);
+        if (err) {
+          reject(err);
+        }
         resolve(result);
       })
       .end(buffer);
@@ -29,9 +32,6 @@ export async function POST(req) {
   //! guardar en base de datos la url de la imagen.
   //! procesar imagen y editar.
   console.log(res); // cloudinary devuelve un objeto extenso con la informacion de la imagen
-  //TODO const uploadedImage = res.secure_url
-  //* Podemos almacenar la url de la imagen en una base de datos.
-
   return NextResponse.json({
     message: "image uploaded",
     url: res.secure_url,
