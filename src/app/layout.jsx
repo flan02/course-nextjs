@@ -1,6 +1,6 @@
-import NavbarTask from "@/components/NavbarTask";
 import "../../globals.css";
 import { roboto } from "@/app/styles/font.js";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "My page with nextjs",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable}`}>
       <body>
-        <NavbarTask />
+        <Navbar />
         {children}
       </body>
     </html>

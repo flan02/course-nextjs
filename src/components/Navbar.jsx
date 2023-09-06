@@ -3,9 +3,9 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar p-20 bg-black text-yellow-100">
+    <nav className="navbar py-20 text-orange-100 bg-slate-800">
       <Link href="/">
-        <h1 className="text-3xl font-bold">Navbar stylized by us</h1>
+        <h1 className="text-3xl font-bold">Nextjs 13.4</h1>
       </Link>
       <ul>
         <li>
