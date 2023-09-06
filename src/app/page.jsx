@@ -24,13 +24,7 @@ export default async function HomePage() {
   //console.log(tasks);
   return (
     <section className="container mx-auto mt-8">
-      <h1 className="w-max mx-auto text-8xl text-blue-400 mb-4">Tasks list</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {tasks.map((task) => (
-          <TaskCard task={task} key={task.id} />
-        ))}
-      </div>
-      <ButtonTask />
+      <h1 className="w-max mx-auto text-8xl text-blue-400 mb-4">Cloudinary</h1>
     </section>
   );
 }
