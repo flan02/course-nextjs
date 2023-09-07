@@ -1,4 +1,4 @@
-import "../../globals.css";
+import "./globals.css";
 import { roboto } from "@/app/styles/font.js";
 import Navbar from "@/components/Navbar";
 
