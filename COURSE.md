@@ -20,3 +20,11 @@
 ## SONNER
 *sonner, genear toast o mensajes con react*
 [github sooner](https://github.com/emilkowalski/sonner)
+
+## SHADCN UI (no se instala con npm install)
+*nos da codigo qe se puede copiar y pegar en nuestro proyecto y podemos alterarlo*
+[shadcn website](https://ui.shadcn.com/)
+**esta construido sobre taildwindcss, y nos da componentes ya configurados**
+**para logica usa radix**
+[radix ui](https://www.radix-ui.com/)
+### No es una libreria de componentes como por ej. material ui, chackra ui. Es una coleccion de componentes reutilizables que se copian y se pegan en el proyecto que deseemos. No se instala con npm install.
