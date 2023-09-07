@@ -1,5 +1,5 @@
-function loading() {
-  return <div>artificial loader...</div>;
+function Loading() {
+  return <div className="text-red-400">artificial loader...</div>;
 }
 
-export default loading;
+export default Loading;

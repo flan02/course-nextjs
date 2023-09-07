@@ -16,3 +16,7 @@
 
 ## DEBUGGING
 *utilizar devtool*
+
+## SONNER
+*sonner, genear toast o mensajes con react*
+[github sooner](https://github.com/emilkowalski/sonner)
