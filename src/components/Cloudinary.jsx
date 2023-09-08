@@ -7,8 +7,9 @@ function Cloudinary() {
   const [file, setFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   return (
-    <div>
+    <div className="mt-36 px-4">
       <form
+        className="px-2 flex flex-col items-center h-96 border border-slate-600"
         onSubmit={async (e) => {
           e.preventDefault();
           const formData = new FormData(); //crea una representacion del formulario en codigo .js
@@ -23,12 +24,17 @@ function Cloudinary() {
         }}
       >
         <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-        <button type="submit">Send</button>
+        <button
+          className="w-max p-2 mt-4 mb-4 text-white bg-blue-500 hover:bg-blue-400 rounded-md"
+          type="submit"
+        >
+          Send
+        </button>
       </form>
       <br />
       {imageUrl && (
         <>
-          <img src={imageUrl} alt="uploaded image" width={300} height={300} />
+          {/* <img src={imageUrl} alt="uploaded image" width={300} height={300} />*/}
           <p>{imageUrl}</p>
         </>
       )}

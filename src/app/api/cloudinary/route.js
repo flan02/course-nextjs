@@ -11,6 +11,20 @@ cloudinary.v2.config({
   secure: true,
 });
 
+export async function GET() {
+  //return NextResponse.redirect("/"); // redirect to home page
+  return NextResponse.json({
+    url_image: [
+      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
+      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
+      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132604/viurccgkrxzuxrsduzn2.jpg",
+      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
+      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
+      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
+    ],
+  });
+}
+
 export async function POST(req) {
   const data = await req.formData();
   const image = data.get("anyName");
@@ -31,7 +45,8 @@ export async function POST(req) {
   });
   //! guardar en base de datos la url de la imagen.
   //! procesar imagen y editar.
-  console.log(res); // cloudinary devuelve un objeto extenso con la informacion de la imagen
+  //* console.log(res); // cloudinary devuelve un objeto extenso con la informacion de la imagen
+
   return NextResponse.json({
     message: "image uploaded",
     url: res.secure_url,
