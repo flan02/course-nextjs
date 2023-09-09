@@ -1,15 +1,13 @@
 "use client";
-
-import Image from "next/image";
 import { useState } from "react";
 
 function Cloudinary() {
   const [file, setFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   return (
-    <div className="mt-36 px-4">
+    <div className="w-1/3 p-4 border border-red-400 h-max">
       <form
-        className="px-2 flex flex-col items-center h-96 border border-slate-600"
+        className="p-2 flex flex-col items-center border border-slate-600"
         onSubmit={async (e) => {
           e.preventDefault();
           const formData = new FormData(); //crea una representacion del formulario en codigo .js
@@ -35,7 +33,7 @@ function Cloudinary() {
       {imageUrl && (
         <>
           {/* <img src={imageUrl} alt="uploaded image" width={300} height={300} />*/}
-          <p>{imageUrl}</p>
+          <p className="text-sm">{imageUrl}</p>
         </>
       )}
     </div>

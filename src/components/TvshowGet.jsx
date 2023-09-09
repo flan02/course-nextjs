@@ -1,19 +1,25 @@
-import React from "react";
+import TvshowCard from "./TvshowCard";
+import "../app/loading";
 
-function TvshowGet({ setImage }) {
+async function getImage() {
+  const res = await fetch("http://localhost:3000/api/cloudinary");
+  const image = await res.json();
+  return image;
+  /*console.log(image);
+  setImage(image);*/
+}
+
+async function TvshowGet() {
+  const image = await getImage();
+
+  console.log(image);
   return (
-    <button
-      onClick={async () => {
-        const res = await fetch("http://localhost:3000/api/cloudinary");
-        const image = await res.json();
-        console.log(image);
-        setImage(image);
-      }}
-      className="mx-auto mb-2 w-max p-2 mt-4 text-white bg-slate-600 hover:bg-slate-500 rounded-md"
-      type="button"
-    >
-      get image
-    </button>
+    <>
+      {image &&
+        image.url_image.map((item, index) => (
+          <TvshowCard item={item} key={index} />
+        ))}
+    </>
   );
 }
 

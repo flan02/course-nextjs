@@ -1,10 +1,19 @@
+import Image from "next/image";
+
 function TvshowCard({ item, index }) {
   return (
-    <>
-      <div key={index} className="m-2 border border-slate-200">
-        <img className="object-center w-full h-min" src={item} alt={item} />
+    <div>
+      <div key={index} className="m-4 border border-slate-200">
+        <Image
+          className="h-96 object-fit"
+          src={item}
+          alt={item}
+          priority={true}
+          width={400}
+          height={400}
+        />
       </div>
-    </>
+    </div>
   );
 }
 

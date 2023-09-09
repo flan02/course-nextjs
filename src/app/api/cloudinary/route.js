@@ -13,6 +13,40 @@ cloudinary.v2.config({
 
 export async function GET() {
   //return NextResponse.redirect("/"); // redirect to home page
+  return new Promise((resolve, reject) => {
+    setTimeout(
+      () =>
+        resolve(
+          NextResponse.json({
+            url_image: [
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694220519/jhoznuhqsfvyuer1cdvo.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694216609/ovchmcigjnl933pc23fm.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215111/n8afpnwnbxkxp60byxf8.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215635/prcf2fvybvpgss7w8q1u.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215331/t6ettvzmdcnq99gpmwpe.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694213165/s98wz5t9ecwkltkt1luk.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694213165/s98wz5t9ecwkltkt1luk.jpg",
+            ],
+          })
+        ),
+      3000
+    );
+  });
+  /*
   return NextResponse.json({
     url_image: [
       "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
@@ -22,7 +56,7 @@ export async function GET() {
       "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
       "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
     ],
-  });
+  });*/
 }
 
 export async function POST(req) {
