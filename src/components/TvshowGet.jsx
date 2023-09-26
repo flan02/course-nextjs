@@ -4,21 +4,20 @@ import "../app/loading";
 async function getImage() {
   const res = await fetch("http://localhost:3000/api/cloudinary");
   const image = await res.json();
+  console.log(image);
   return image;
+
   /*console.log(image);
   setImage(image);*/
 }
 
 async function TvshowGet() {
   const image = await getImage();
-
-  console.log(image);
+  //console.log("the image", image);
   return (
     <>
       {image &&
-        image.url_image.map((item, index) => (
-          <TvshowCard item={item} key={index} />
-        ))}
+        image.map((item, index) => <TvshowCard item={item} key={index} />)}
     </>
   );
 }

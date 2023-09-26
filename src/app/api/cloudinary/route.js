@@ -17,47 +17,99 @@ export async function GET() {
     setTimeout(
       () =>
         resolve(
-          NextResponse.json({
-            url_image: [
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694220519/jhoznuhqsfvyuer1cdvo.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694216609/ovchmcigjnl933pc23fm.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215111/n8afpnwnbxkxp60byxf8.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215635/prcf2fvybvpgss7w8q1u.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215331/t6ettvzmdcnq99gpmwpe.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694213165/s98wz5t9ecwkltkt1luk.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
-              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694213165/s98wz5t9ecwkltkt1luk.jpg",
-            ],
-          })
-        ),
-      3000
+          NextResponse.json([
+            {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694220519/jhoznuhqsfvyuer1cdvo.jpg",
+              title: "Goliath",
+              season: "4",
+              chapter: "32",
+              average: [6, 8, 9, 7],
+              status: "finished",
+            },
+            {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694550303/foxshrqe5abuarkotdbp.webp",
+              title: "Gotham",
+              season: "5",
+              chapter: "100",
+              average: [6, 8, 9, 7],
+              status: "finished",
+            },
+            {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215111/n8afpnwnbxkxp60byxf8.jpg",
+              title: "LOTR - the Rings of Power",
+              season: "1",
+              chapter: "8",
+              average: [6, 8, 9, 7],
+              status: "active",
+            },
+            {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
+              title: "House of Dragon",
+              season: "1",
+              chapter: "10",
+              average: [6, 8, 9, 7],
+              status: "active",
+            },
+          ]),
+          3000
+        )
+      // END: abpxx6d04wxr
     );
   });
-  /*
+}
+
+/*
+
+
+
   return NextResponse.json({
+      movie1: {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694220519/jhoznuhqsfvyuer1cdvo.jpg",
+              title: "Goliath",
+              season: "4",
+              chapter: "32",
+              average: [6, 8, 9, 7],
+              status: "finished",
+            },
+            movie2: {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694550303/foxshrqe5abuarkotdbp.webp",
+              title: "Gotham",
+              season: "5",
+              chapter: "100",
+              average: [10, 7, 5, 10, 8],
+              status: "finished",
+            },
+            movie3: {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215111/n8afpnwnbxkxp60byxf8.jpg",
+              title: "LOTR - the Rings of Power",
+              season: "1",
+              chapter: "8",
+              average: [5, 6, 7, 7, 8],
+              status: "in production",
+            },
+            movie4: {
+              url_image:
+                "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
+              title: "House of Dragon",
+              season: "1",
+              chapter: "8",
+              average: [3, 6, 10, 9, 5],
+              status: "in production",
+            },
     url_image: [
-      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
-      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694130534/pxwkfbgkrbj58wp7gbwg.webp",
-      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132604/viurccgkrxzuxrsduzn2.jpg",
-      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694132767/eg0kcoq2djzos4umyubv.jpg",
-      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133226/fffuwafcm4z0ruvomezh.jpg",
-      "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694133029/nk5kc4vbqmoiylkwkkwf.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694220519/jhoznuhqsfvyuer1cdvo.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694550303/foxshrqe5abuarkotdbp.webp",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694215111/n8afpnwnbxkxp60byxf8.jpg",
+              "https://res.cloudinary.com/dhbig9jt8/image/upload/v1694127466/okodgnx4drokvtcw8n6x.jpg",
     ],
   });*/
-}
 
 export async function POST(req) {
   const data = await req.formData();

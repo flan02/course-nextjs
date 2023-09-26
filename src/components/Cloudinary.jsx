@@ -5,7 +5,7 @@ function Cloudinary() {
   const [file, setFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   return (
-    <div className="w-1/3 p-4 border border-red-400 h-max">
+    <div className="w-max mx-auto mt-4 lg:mt-0 xl:1/3 p-4 border border-slate-400 h-max">
       <form
         className="p-2 flex flex-col items-center border border-slate-600"
         onSubmit={async (e) => {

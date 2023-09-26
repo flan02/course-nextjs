@@ -8,9 +8,9 @@ import TvshowGet from "./TvshowGet";
 
 function Tvshows() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col xl:flex-row mx-auto">
       <Suspense fallback={<Loading />}>
-        <article className="grid grid-cols-3 border border-slate-500">
+        <article className="grid grid-cols-1 px-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           <TvshowGet />
         </article>
       </Suspense>

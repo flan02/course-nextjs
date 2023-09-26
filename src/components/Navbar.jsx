@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <nav className="navbar py-20 text-orange-100 bg-slate-800">
       <Link href="/">
-        <h1 className="text-3xl font-bold">Nextjs 13.4</h1>
+        <h1 className="text-2xl xl:text-3xl font-bold">Nextjs 13.4</h1>
       </Link>
-      <ul>
+      <ul className="text-xs xl:text-2xl">
         <li>
           <Link href="/about">About</Link>
         </li>
